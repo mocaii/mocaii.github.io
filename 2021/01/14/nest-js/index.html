@@ -4,33 +4,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>mocai的学习笔记</title>
+  <title>Nest.js基础入门 | mocai的学习笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Nest.js快速入门一、介绍Nest 是一个用于构建高效，可扩展的Node.js服务器端应用程序的框架。它使用渐进式JavaScript，内置并完全支持TypeScript（但仍然允许开发人员使用纯 JavaScript编写代码）并结合了OOP（面向对象编程），FP（函数式编程）和FRP（函数式响应编程）的元素。在底层，Nest使用强大的 HTTP Server 框架，如 Express（默认）">
+  <meta name="description" content="一、介绍Nest 是一个用于构建高效，可扩展的Node.js服务器端应用程序的框架。它使用渐进式JavaScript，内置并完全支持TypeScript（但仍然允许开发人员使用纯 JavaScript编写代码）并结合了OOP（面向对象编程），FP（函数式编程）和FRP（函数式响应编程）的元素。在底层，Nest使用强大的 HTTP Server 框架，如 Express（默认）和Fastify。Ne">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mocai的学习笔记">
-<meta property="og:url" content="http://example.com/2020/09/18/nest-js/index.html">
+<meta property="og:title" content="Nest.js基础入门">
+<meta property="og:url" content="http://example.com/2021/01/14/nest-js/index.html">
 <meta property="og:site_name" content="mocai的学习笔记">
-<meta property="og:description" content="Nest.js快速入门一、介绍Nest 是一个用于构建高效，可扩展的Node.js服务器端应用程序的框架。它使用渐进式JavaScript，内置并完全支持TypeScript（但仍然允许开发人员使用纯 JavaScript编写代码）并结合了OOP（面向对象编程），FP（函数式编程）和FRP（函数式响应编程）的元素。在底层，Nest使用强大的 HTTP Server 框架，如 Express（默认）">
+<meta property="og:description" content="一、介绍Nest 是一个用于构建高效，可扩展的Node.js服务器端应用程序的框架。它使用渐进式JavaScript，内置并完全支持TypeScript（但仍然允许开发人员使用纯 JavaScript编写代码）并结合了OOP（面向对象编程），FP（函数式编程）和FRP（函数式响应编程）的元素。在底层，Nest使用强大的 HTTP Server 框架，如 Express（默认）和Fastify。Ne">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2020/09/18/nest-js/1.png">
-<meta property="og:image" content="http://example.com/2020/09/18/nest-js/3.png">
-<meta property="og:image" content="http://example.com/2020/09/18/nest-js/2.png">
-<meta property="og:image" content="http://example.com/2020/09/18/nest-js/4.png">
-<meta property="og:image" content="http://example.com/2020/09/18/nest-js/5.jpeg">
-<meta property="og:image" content="http://example.com/2020/09/18/nest-js/6.jpeg">
-<meta property="og:image" content="http://example.com/2020/09/18/nest-js/7.jpeg">
-<meta property="og:image" content="http://example.com/2020/09/18/nest-js/8.jpeg">
-<meta property="og:image" content="http://example.com/2020/09/18/nest-js/9.jpeg">
-<meta property="og:image" content="http://example.com/2020/09/18/nest-js/10.png">
-<meta property="og:image" content="http://example.com/2020/09/18/nest-js/11.png">
-<meta property="og:image" content="http://example.com/2020/09/18/nest-js/12.png">
-<meta property="og:image" content="http://example.com/2020/09/18/nest-js/13.png">
-<meta property="article:published_time" content="2020-09-18T02:30:33.027Z">
-<meta property="article:modified_time" content="2021-01-14T06:36:51.980Z">
+<meta property="og:image" content="http://example.com/2021/01/14/nest-js/1.png">
+<meta property="og:image" content="http://example.com/2021/01/14/nest-js/3.png">
+<meta property="og:image" content="http://example.com/2021/01/14/nest-js/2.png">
+<meta property="og:image" content="http://example.com/2021/01/14/nest-js/4.png">
+<meta property="og:image" content="http://example.com/2021/01/14/nest-js/5.jpeg">
+<meta property="og:image" content="http://example.com/2021/01/14/nest-js/6.jpeg">
+<meta property="og:image" content="http://example.com/2021/01/14/nest-js/7.jpeg">
+<meta property="og:image" content="http://example.com/2021/01/14/nest-js/8.jpeg">
+<meta property="og:image" content="http://example.com/2021/01/14/nest-js/9.jpeg">
+<meta property="og:image" content="http://example.com/2021/01/14/nest-js/10.png">
+<meta property="og:image" content="http://example.com/2021/01/14/nest-js/11.png">
+<meta property="og:image" content="http://example.com/2021/01/14/nest-js/12.png">
+<meta property="og:image" content="http://example.com/2021/01/14/nest-js/13.png">
+<meta property="article:published_time" content="2021-01-14T07:14:07.000Z">
+<meta property="article:modified_time" content="2021-01-14T07:16:07.518Z">
 <meta property="article:author" content="Mocai">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2020/09/18/nest-js/1.png">
+<meta name="twitter:image" content="http://example.com/2021/01/14/nest-js/1.png">
   
     <link rel="alternative" href="/atom.xml" title="mocai的学习笔记" type="application/atom+xml">
   
@@ -86,17 +86,27 @@
     <div class="outer">
       <section id="main"><article id="post-nest-js" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/09/18/nest-js/" class="article-date">
-  <time datetime="2020-09-18T02:30:33.027Z" itemprop="datePublished">2020-09-18</time>
+    <a href="/2021/01/14/nest-js/" class="article-date">
+  <time datetime="2021-01-14T07:14:07.000Z" itemprop="datePublished">2021-01-14</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Nest.js基础入门
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Nest-js快速入门"><a href="#Nest-js快速入门" class="headerlink" title="Nest.js快速入门"></a>Nest.js快速入门</h1><h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>Nest 是一个用于构建高效，可扩展的<a target="_blank" rel="noopener" href="http://nodejs.cn/">Node.js</a>服务器端应用程序的框架。它使用渐进式JavaScript，内置并完全支持<a target="_blank" rel="noopener" href="https://www.tslang.cn/">TypeScript</a>（但仍然允许开发人员使用纯 JavaScript编写代码）并结合了OOP（面向对象编程），FP（函数式编程）和FRP（函数式响应编程）的元素。在底层，Nest使用强大的 HTTP Server 框架，如 Express（默认）和Fastify。Nest在这些框架之上提供了一定程度的抽象，同时也将其API直接暴露给开发人员。这样可以轻松使用每个平台的无数第三方模块。</p>
+        <h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>Nest 是一个用于构建高效，可扩展的<a target="_blank" rel="noopener" href="http://nodejs.cn/">Node.js</a>服务器端应用程序的框架。它使用渐进式JavaScript，内置并完全支持<a target="_blank" rel="noopener" href="https://www.tslang.cn/">TypeScript</a>（但仍然允许开发人员使用纯 JavaScript编写代码）并结合了OOP（面向对象编程），FP（函数式编程）和FRP（函数式响应编程）的元素。在底层，Nest使用强大的 HTTP Server 框架，如 Express（默认）和Fastify。Nest在这些框架之上提供了一定程度的抽象，同时也将其API直接暴露给开发人员。这样可以轻松使用每个平台的无数第三方模块。</p>
 <h4 id="二、安装与启动"><a href="#二、安装与启动" class="headerlink" title="二、安装与启动"></a>二、安装与启动</h4><h5 id="1-全局安装脚手架"><a href="#1-全局安装脚手架" class="headerlink" title="1.全局安装脚手架"></a>1.全局安装脚手架</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">npm i -g @nestjs/cli</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span> </span><br></pre></td></tr></table></figure>
 <h5 id="2-创建项目"><a href="#2-创建项目" class="headerlink" title="2.创建项目"></a>2.创建项目</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /dirName</span><br><span class="line">nest <span class="keyword">new</span> project-name</span><br></pre></td></tr></table></figure>
 <h5 id="3-启动项目"><a href="#3-启动项目" class="headerlink" title="3.启动项目"></a>3.启动项目</h5><p>默认启动3000端口，可在主文件main.ts修改端口</p>
@@ -112,7 +122,7 @@
 </ol>
 </blockquote>
 <div style="width: 250px;">
- <img src="/2020/09/18/nest-js/1.png" class="">
+ <img src="/2021/01/14/nest-js/1.png" class="">
 </div>
 
 
@@ -134,16 +144,16 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run createFolder talks</span><br></pre></td></tr></table></figure>
 <p>执行结果</p>
 <div style="width: 400px">
- <img src="/2020/09/18/nest-js/3.png" class="">
+ <img src="/2021/01/14/nest-js/3.png" class="">
 </div>
 
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/2.png" class="">
+ <img src="/2021/01/14/nest-js/2.png" class="">
 </div>
 
 <p>抛出异常</p>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/4.png" class="">
+ <img src="/2021/01/14/nest-js/4.png" class="">
 </div>
 
 <h5 id="3-Controller控制器"><a href="#3-Controller控制器" class="headerlink" title="3.Controller控制器"></a>3.Controller控制器</h5><p><a target="_blank" rel="noopener" href="https://docs.nestjs.cn/7/controllers">控制器</a>负责处理传入的 请求 和向客户端返回响应；<br>控制器所需的 @Controller()装饰器及请求方法装饰器如@Get()，@Post()可声明路由；<br>如下面例子，@Controller(‘talks’)与@Get(“getInfo”)会为请求生成路由映射 /talks/getInfo</p>
@@ -153,7 +163,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Controller, Get &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"> </span><br><span class="line">@Controller(<span class="string">&#x27;talks&#x27;</span>)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">TalksController</span> </span>&#123;</span><br><span class="line">   </span><br><span class="line">  @Get(<span class="string">&quot;getInfo&quot;</span>)</span><br><span class="line">  getInfo(): any &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;莫彩梅&quot;</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/5.jpeg" class="">
+ <img src="/2021/01/14/nest-js/5.jpeg" class="">
 </div>
 
 <h5 id="4-Providers（service-提供者"><a href="#4-Providers（service-提供者" class="headerlink" title="4.Providers（service)提供者"></a>4.Providers（service)提供者</h5><p>Controller处理请求，把复杂的任务交给<a target="_blank" rel="noopener" href="https://docs.nestjs.cn/7/providers">Providers</a>处理，例如数据处理，数据库操作等。</p>
@@ -174,13 +184,13 @@
 
 <p>结果：</p>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/6.jpeg" class="">
+ <img src="/2021/01/14/nest-js/6.jpeg" class="">
 </div>
 
 
 <h5 id="5-Module模块"><a href="#5-Module模块" class="headerlink" title="5.Module模块"></a>5.Module模块</h5><p><a target="_blank" rel="noopener" href="https://docs.nestjs.cn/7/modules">模块</a>构成应用程序</p>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/7.jpeg" class="">
+ <img src="/2021/01/14/nest-js/7.jpeg" class="">
 </div>
 
 <h6 id="（1）根模块"><a href="#（1）根模块" class="headerlink" title="（1）根模块"></a>（1）根模块</h6><p>根模块（必须），组织各种模块（如功能模块）；<br>一般用cli命令生成的模块会自动导入到根模块中</p>
@@ -214,7 +224,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; NestFactory &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/core&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; AppModule &#125; <span class="keyword">from</span> <span class="string">&#x27;./app.module&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Logger, ValidationPipe &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">bootstrap</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> app = <span class="keyword">await</span> NestFactory.create(AppModule);</span><br><span class="line">  <span class="comment">// 全局使用管道</span></span><br><span class="line">  app.useGlobalPipes(<span class="keyword">new</span> ValidationPipe());</span><br><span class="line">  <span class="keyword">await</span> app.listen(<span class="number">3001</span>,<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    Logger.log(<span class="string">&#x27;服务已经启动,请访问localhost:3000&#x27;</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line">bootstrap();</span><br></pre></td></tr></table></figure>
 <p>局部与全局验证结果一致：</p>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/8.jpeg" class="">
+ <img src="/2021/01/14/nest-js/8.jpeg" class="">
 </div>
 
 <h4 id="五、数据库"><a href="#五、数据库" class="headerlink" title="五、数据库"></a>五、数据库</h4><h5 id="1-安装ORM库"><a href="#1-安装ORM库" class="headerlink" title="1.安装ORM库"></a>1.安装ORM库</h5><p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2019/02/orm-tutorial.html">ORM</a>即对象-关系映射，可以不用写sql，直接操作数据库；<br>Nest 使用<a target="_blank" rel="noopener" href="https://github.com/typeorm/typeorm">TypeORM</a>是因为它是 TypeScript 中最成熟的对象关系映射器( ORM )。因为它是用 TypeScript 编写的，所以可以很好地与 Nest 框架集成。</p>
@@ -222,7 +232,7 @@
 <h5 id="2-创建ormconfig-json"><a href="#2-创建ormconfig-json" class="headerlink" title="2.创建ormconfig.json"></a>2.创建ormconfig.json</h5><p>配置你要连接的数据库信息</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;type&quot;</span>: <span class="string">&quot;mysql&quot;</span>,</span><br><span class="line">  <span class="string">&quot;host&quot;</span>: <span class="string">&quot;localhost&quot;</span>,</span><br><span class="line">  <span class="string">&quot;port&quot;</span>: <span class="number">3306</span>,</span><br><span class="line">  <span class="string">&quot;username&quot;</span>: <span class="string">&quot;root&quot;</span>,</span><br><span class="line">  <span class="string">&quot;password&quot;</span>: <span class="string">&quot;*******&quot;</span>,<span class="comment">//填你的数据库密码</span></span><br><span class="line">  <span class="string">&quot;database&quot;</span>: <span class="string">&quot;nest-test&quot;</span>,</span><br><span class="line">  <span class="string">&quot;entities&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;dist/**/*.entity&#123;.ts,.js&#125;&quot;</span> <span class="comment">//静态全局路径</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">&quot;synchronize&quot;</span>: <span class="literal">true</span> <span class="comment">// 是否自动将实体类同步到数据库</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/9.jpeg" class="">
+ <img src="/2021/01/14/nest-js/9.jpeg" class="">
 </div>
 
 <h5 id="3-创建实体类"><a href="#3-创建实体类" class="headerlink" title="3.创建实体类"></a>3.创建实体类</h5><p>实体类一般都与数据库中的表结构一一对应<br>表→类<br>字段→属性</p>
@@ -261,22 +271,22 @@
 <h6 id="（1）新增数据"><a href="#（1）新增数据" class="headerlink" title="（1）新增数据"></a>（1）新增数据</h6><p>typeorm封装好的save方法保存数据假如数据库没有user表，会帮你创建一个。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//service</span></span><br><span class="line"><span class="keyword">async</span> create(userInfoDto: UserInfoDto): <span class="built_in">Promise</span>&lt;User&gt;  &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">await</span> <span class="built_in">this</span>.usersRepository.save(userInfoDto);</span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//controller</span></span><br><span class="line">@Post(<span class="string">&#x27;add&#x27;</span>)</span><br><span class="line">  <span class="keyword">async</span> create(@Body() userInfo: UserInfoDto): <span class="built_in">Promise</span>&lt;any&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.usersService.create(userInfo);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//http://localhost:3001/users/add   Post</span></span><br><span class="line"><span class="comment">//&#123;&quot;name&quot;: &quot;mocai&quot;,&quot;firstName&quot;: &quot;mo&quot;,&quot;lastName&quot;:&quot;cai&quot;,&quot;age&quot;: 18,&quot;sex&quot;: &quot;女&quot;&#125;</span></span><br></pre></td></tr></table></figure>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/10.png" class="">
+ <img src="/2021/01/14/nest-js/10.png" class="">
 </div>
 
 <h6 id="2-查找一条数据findOne"><a href="#2-查找一条数据findOne" class="headerlink" title="(2)查找一条数据findOne"></a>(2)查找一条数据findOne</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//service</span></span><br><span class="line"><span class="keyword">async</span> findOne(id): <span class="built_in">Promise</span>&lt;User&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">await</span> <span class="built_in">this</span>.usersRepository.findOne(&#123;id&#125;);</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//controller</span></span><br><span class="line">@Get(<span class="string">&#x27;findOne&#x27;</span>)</span><br><span class="line">  <span class="keyword">async</span> findOne(@Query(<span class="string">&#x27;id&#x27;</span>) id): <span class="built_in">Promise</span>&lt;any&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span>  <span class="built_in">this</span>.usersService.findOne(id);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/11.png" class="">
+ <img src="/2021/01/14/nest-js/11.png" class="">
 </div>
 
 <h6 id="3-查找全部数据find"><a href="#3-查找全部数据find" class="headerlink" title="(3)查找全部数据find"></a>(3)查找全部数据find</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//service</span></span><br><span class="line">findAll(): <span class="built_in">Promise</span>&lt;User[]&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.usersRepository.find();</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//controller</span></span><br><span class="line">@Get(<span class="string">&#x27;findAll&#x27;</span>)</span><br><span class="line">  <span class="keyword">async</span> findAll(): <span class="built_in">Promise</span>&lt;any&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.usersService.findAll();</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/12.png" class="">
+ <img src="/2021/01/14/nest-js/12.png" class="">
 </div>
 
 <h6 id="（4）QueryBuilder或query原生sql查询"><a href="#（4）QueryBuilder或query原生sql查询" class="headerlink" title="（4）QueryBuilder或query原生sql查询"></a>（4）QueryBuilder或query原生sql查询</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//query写法</span></span><br><span class="line">selectmocai(): <span class="built_in">Promise</span>&lt;User[]&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.usersRepository.query(<span class="string">&quot;SELECT * FROM user WHERE `name`=&#x27;mocai&#x27;&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//QueryBuilder写法</span></span><br><span class="line">selectmocai(): <span class="built_in">Promise</span>&lt;User[]&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.usersRepository.createQueryBuilder(<span class="string">&quot;user&quot;</span>).where(<span class="string">&quot;name = &#x27;mocai&#x27;&quot;</span>).getMany();</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/13.png" class="">
+ <img src="/2021/01/14/nest-js/13.png" class="">
 </div>
 
 <h6 id="（5）typeorm更多操作"><a href="#（5）typeorm更多操作" class="headerlink" title="（5）typeorm更多操作"></a>（5）typeorm更多操作</h6><p><a target="_blank" rel="noopener" href="https://www.bookstack.cn/read/TypeORM-0.2.20-zh/spilt.3.select-query-builder.md">中文文档</a>  <a target="_blank" rel="noopener" href="https://github.com/typeorm/typeorm">Git Homepage</a>   <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/section/1490182">Nest/typeorm</a></p>
@@ -285,11 +295,11 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/09/18/nest-js/" data-id="ckjwi9oks0000x32n5ilf7y7a" class="article-share-link" data-share="baidu" data-title="">Share</a>
+        <a data-url="http://example.com/2021/01/14/nest-js/" data-id="ckjwjmmwv00002y2ne6uo0lfd" class="article-share-link" data-share="baidu" data-title="Nest.js基础入门">Share</a>
       
 
       
-        <a href="http://example.com/2020/09/18/nest-js/#ds-thread" class="article-comment-link">Comments</a>
+        <a href="http://example.com/2021/01/14/nest-js/#ds-thread" class="article-comment-link">Comments</a>
       
 
       
@@ -297,12 +307,22 @@
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/2021/01/14/%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B%E3%80%81%E8%A7%84%E8%8C%83/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">代码检测、规范</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
   <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="2020/09/18/nest-js/" data-title="" data-url="http://example.com/2020/09/18/nest-js/"></div>
+    <div id="ds-thread" class="ds-thread" data-thread-key="2021/01/14/nest-js/" data-title="Nest.js基础入门" data-url="http://example.com/2021/01/14/nest-js/"></div>
   </section>
 </section>
       
@@ -318,7 +338,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -330,7 +350,11 @@
       <ul>
         
           <li>
-            <a href="/2020/09/18/nest-js/">(no title)</a>
+            <a href="/2021/01/14/nest-js/">Nest.js基础入门</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/14/%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B%E3%80%81%E8%A7%84%E8%8C%83/">代码检测、规范</a>
           </li>
         
       </ul>

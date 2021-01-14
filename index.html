@@ -70,17 +70,27 @@
   
     <article id="post-nest-js" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/09/18/nest-js/" class="article-date">
-  <time datetime="2020-09-18T02:30:33.027Z" itemprop="datePublished">2020-09-18</time>
+    <a href="/2021/01/14/nest-js/" class="article-date">
+  <time datetime="2021-01-14T07:14:07.000Z" itemprop="datePublished">2021-01-14</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/14/nest-js/">Nest.js基础入门</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Nest-js快速入门"><a href="#Nest-js快速入门" class="headerlink" title="Nest.js快速入门"></a>Nest.js快速入门</h1><h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>Nest 是一个用于构建高效，可扩展的<a target="_blank" rel="noopener" href="http://nodejs.cn/">Node.js</a>服务器端应用程序的框架。它使用渐进式JavaScript，内置并完全支持<a target="_blank" rel="noopener" href="https://www.tslang.cn/">TypeScript</a>（但仍然允许开发人员使用纯 JavaScript编写代码）并结合了OOP（面向对象编程），FP（函数式编程）和FRP（函数式响应编程）的元素。在底层，Nest使用强大的 HTTP Server 框架，如 Express（默认）和Fastify。Nest在这些框架之上提供了一定程度的抽象，同时也将其API直接暴露给开发人员。这样可以轻松使用每个平台的无数第三方模块。</p>
+        <h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>Nest 是一个用于构建高效，可扩展的<a target="_blank" rel="noopener" href="http://nodejs.cn/">Node.js</a>服务器端应用程序的框架。它使用渐进式JavaScript，内置并完全支持<a target="_blank" rel="noopener" href="https://www.tslang.cn/">TypeScript</a>（但仍然允许开发人员使用纯 JavaScript编写代码）并结合了OOP（面向对象编程），FP（函数式编程）和FRP（函数式响应编程）的元素。在底层，Nest使用强大的 HTTP Server 框架，如 Express（默认）和Fastify。Nest在这些框架之上提供了一定程度的抽象，同时也将其API直接暴露给开发人员。这样可以轻松使用每个平台的无数第三方模块。</p>
 <h4 id="二、安装与启动"><a href="#二、安装与启动" class="headerlink" title="二、安装与启动"></a>二、安装与启动</h4><h5 id="1-全局安装脚手架"><a href="#1-全局安装脚手架" class="headerlink" title="1.全局安装脚手架"></a>1.全局安装脚手架</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">npm i -g @nestjs/cli</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span> </span><br></pre></td></tr></table></figure>
 <h5 id="2-创建项目"><a href="#2-创建项目" class="headerlink" title="2.创建项目"></a>2.创建项目</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /dirName</span><br><span class="line">nest <span class="keyword">new</span> project-name</span><br></pre></td></tr></table></figure>
 <h5 id="3-启动项目"><a href="#3-启动项目" class="headerlink" title="3.启动项目"></a>3.启动项目</h5><p>默认启动3000端口，可在主文件main.ts修改端口</p>
@@ -96,7 +106,7 @@
 </ol>
 </blockquote>
 <div style="width: 250px;">
- <img src="/2020/09/18/nest-js/1.png" class="">
+ <img src="/2021/01/14/nest-js/1.png" class="">
 </div>
 
 
@@ -118,16 +128,16 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run createFolder talks</span><br></pre></td></tr></table></figure>
 <p>执行结果</p>
 <div style="width: 400px">
- <img src="/2020/09/18/nest-js/3.png" class="">
+ <img src="/2021/01/14/nest-js/3.png" class="">
 </div>
 
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/2.png" class="">
+ <img src="/2021/01/14/nest-js/2.png" class="">
 </div>
 
 <p>抛出异常</p>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/4.png" class="">
+ <img src="/2021/01/14/nest-js/4.png" class="">
 </div>
 
 <h5 id="3-Controller控制器"><a href="#3-Controller控制器" class="headerlink" title="3.Controller控制器"></a>3.Controller控制器</h5><p><a target="_blank" rel="noopener" href="https://docs.nestjs.cn/7/controllers">控制器</a>负责处理传入的 请求 和向客户端返回响应；<br>控制器所需的 @Controller()装饰器及请求方法装饰器如@Get()，@Post()可声明路由；<br>如下面例子，@Controller(‘talks’)与@Get(“getInfo”)会为请求生成路由映射 /talks/getInfo</p>
@@ -137,7 +147,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Controller, Get &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"> </span><br><span class="line">@Controller(<span class="string">&#x27;talks&#x27;</span>)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">TalksController</span> </span>&#123;</span><br><span class="line">   </span><br><span class="line">  @Get(<span class="string">&quot;getInfo&quot;</span>)</span><br><span class="line">  getInfo(): any &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;莫彩梅&quot;</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/5.jpeg" class="">
+ <img src="/2021/01/14/nest-js/5.jpeg" class="">
 </div>
 
 <h5 id="4-Providers（service-提供者"><a href="#4-Providers（service-提供者" class="headerlink" title="4.Providers（service)提供者"></a>4.Providers（service)提供者</h5><p>Controller处理请求，把复杂的任务交给<a target="_blank" rel="noopener" href="https://docs.nestjs.cn/7/providers">Providers</a>处理，例如数据处理，数据库操作等。</p>
@@ -158,13 +168,13 @@
 
 <p>结果：</p>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/6.jpeg" class="">
+ <img src="/2021/01/14/nest-js/6.jpeg" class="">
 </div>
 
 
 <h5 id="5-Module模块"><a href="#5-Module模块" class="headerlink" title="5.Module模块"></a>5.Module模块</h5><p><a target="_blank" rel="noopener" href="https://docs.nestjs.cn/7/modules">模块</a>构成应用程序</p>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/7.jpeg" class="">
+ <img src="/2021/01/14/nest-js/7.jpeg" class="">
 </div>
 
 <h6 id="（1）根模块"><a href="#（1）根模块" class="headerlink" title="（1）根模块"></a>（1）根模块</h6><p>根模块（必须），组织各种模块（如功能模块）；<br>一般用cli命令生成的模块会自动导入到根模块中</p>
@@ -198,7 +208,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; NestFactory &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/core&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; AppModule &#125; <span class="keyword">from</span> <span class="string">&#x27;./app.module&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Logger, ValidationPipe &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">bootstrap</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> app = <span class="keyword">await</span> NestFactory.create(AppModule);</span><br><span class="line">  <span class="comment">// 全局使用管道</span></span><br><span class="line">  app.useGlobalPipes(<span class="keyword">new</span> ValidationPipe());</span><br><span class="line">  <span class="keyword">await</span> app.listen(<span class="number">3001</span>,<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    Logger.log(<span class="string">&#x27;服务已经启动,请访问localhost:3000&#x27;</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line">bootstrap();</span><br></pre></td></tr></table></figure>
 <p>局部与全局验证结果一致：</p>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/8.jpeg" class="">
+ <img src="/2021/01/14/nest-js/8.jpeg" class="">
 </div>
 
 <h4 id="五、数据库"><a href="#五、数据库" class="headerlink" title="五、数据库"></a>五、数据库</h4><h5 id="1-安装ORM库"><a href="#1-安装ORM库" class="headerlink" title="1.安装ORM库"></a>1.安装ORM库</h5><p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2019/02/orm-tutorial.html">ORM</a>即对象-关系映射，可以不用写sql，直接操作数据库；<br>Nest 使用<a target="_blank" rel="noopener" href="https://github.com/typeorm/typeorm">TypeORM</a>是因为它是 TypeScript 中最成熟的对象关系映射器( ORM )。因为它是用 TypeScript 编写的，所以可以很好地与 Nest 框架集成。</p>
@@ -206,7 +216,7 @@
 <h5 id="2-创建ormconfig-json"><a href="#2-创建ormconfig-json" class="headerlink" title="2.创建ormconfig.json"></a>2.创建ormconfig.json</h5><p>配置你要连接的数据库信息</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;type&quot;</span>: <span class="string">&quot;mysql&quot;</span>,</span><br><span class="line">  <span class="string">&quot;host&quot;</span>: <span class="string">&quot;localhost&quot;</span>,</span><br><span class="line">  <span class="string">&quot;port&quot;</span>: <span class="number">3306</span>,</span><br><span class="line">  <span class="string">&quot;username&quot;</span>: <span class="string">&quot;root&quot;</span>,</span><br><span class="line">  <span class="string">&quot;password&quot;</span>: <span class="string">&quot;*******&quot;</span>,<span class="comment">//填你的数据库密码</span></span><br><span class="line">  <span class="string">&quot;database&quot;</span>: <span class="string">&quot;nest-test&quot;</span>,</span><br><span class="line">  <span class="string">&quot;entities&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;dist/**/*.entity&#123;.ts,.js&#125;&quot;</span> <span class="comment">//静态全局路径</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">&quot;synchronize&quot;</span>: <span class="literal">true</span> <span class="comment">// 是否自动将实体类同步到数据库</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/9.jpeg" class="">
+ <img src="/2021/01/14/nest-js/9.jpeg" class="">
 </div>
 
 <h5 id="3-创建实体类"><a href="#3-创建实体类" class="headerlink" title="3.创建实体类"></a>3.创建实体类</h5><p>实体类一般都与数据库中的表结构一一对应<br>表→类<br>字段→属性</p>
@@ -245,22 +255,22 @@
 <h6 id="（1）新增数据"><a href="#（1）新增数据" class="headerlink" title="（1）新增数据"></a>（1）新增数据</h6><p>typeorm封装好的save方法保存数据假如数据库没有user表，会帮你创建一个。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//service</span></span><br><span class="line"><span class="keyword">async</span> create(userInfoDto: UserInfoDto): <span class="built_in">Promise</span>&lt;User&gt;  &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">await</span> <span class="built_in">this</span>.usersRepository.save(userInfoDto);</span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//controller</span></span><br><span class="line">@Post(<span class="string">&#x27;add&#x27;</span>)</span><br><span class="line">  <span class="keyword">async</span> create(@Body() userInfo: UserInfoDto): <span class="built_in">Promise</span>&lt;any&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.usersService.create(userInfo);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//http://localhost:3001/users/add   Post</span></span><br><span class="line"><span class="comment">//&#123;&quot;name&quot;: &quot;mocai&quot;,&quot;firstName&quot;: &quot;mo&quot;,&quot;lastName&quot;:&quot;cai&quot;,&quot;age&quot;: 18,&quot;sex&quot;: &quot;女&quot;&#125;</span></span><br></pre></td></tr></table></figure>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/10.png" class="">
+ <img src="/2021/01/14/nest-js/10.png" class="">
 </div>
 
 <h6 id="2-查找一条数据findOne"><a href="#2-查找一条数据findOne" class="headerlink" title="(2)查找一条数据findOne"></a>(2)查找一条数据findOne</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//service</span></span><br><span class="line"><span class="keyword">async</span> findOne(id): <span class="built_in">Promise</span>&lt;User&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">await</span> <span class="built_in">this</span>.usersRepository.findOne(&#123;id&#125;);</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//controller</span></span><br><span class="line">@Get(<span class="string">&#x27;findOne&#x27;</span>)</span><br><span class="line">  <span class="keyword">async</span> findOne(@Query(<span class="string">&#x27;id&#x27;</span>) id): <span class="built_in">Promise</span>&lt;any&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span>  <span class="built_in">this</span>.usersService.findOne(id);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/11.png" class="">
+ <img src="/2021/01/14/nest-js/11.png" class="">
 </div>
 
 <h6 id="3-查找全部数据find"><a href="#3-查找全部数据find" class="headerlink" title="(3)查找全部数据find"></a>(3)查找全部数据find</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//service</span></span><br><span class="line">findAll(): <span class="built_in">Promise</span>&lt;User[]&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.usersRepository.find();</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//controller</span></span><br><span class="line">@Get(<span class="string">&#x27;findAll&#x27;</span>)</span><br><span class="line">  <span class="keyword">async</span> findAll(): <span class="built_in">Promise</span>&lt;any&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.usersService.findAll();</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/12.png" class="">
+ <img src="/2021/01/14/nest-js/12.png" class="">
 </div>
 
 <h6 id="（4）QueryBuilder或query原生sql查询"><a href="#（4）QueryBuilder或query原生sql查询" class="headerlink" title="（4）QueryBuilder或query原生sql查询"></a>（4）QueryBuilder或query原生sql查询</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//query写法</span></span><br><span class="line">selectmocai(): <span class="built_in">Promise</span>&lt;User[]&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.usersRepository.query(<span class="string">&quot;SELECT * FROM user WHERE `name`=&#x27;mocai&#x27;&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//QueryBuilder写法</span></span><br><span class="line">selectmocai(): <span class="built_in">Promise</span>&lt;User[]&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.usersRepository.createQueryBuilder(<span class="string">&quot;user&quot;</span>).where(<span class="string">&quot;name = &#x27;mocai&#x27;&quot;</span>).getMany();</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 <div style="width: 800px;">
- <img src="/2020/09/18/nest-js/13.png" class="">
+ <img src="/2021/01/14/nest-js/13.png" class="">
 </div>
 
 <h6 id="（5）typeorm更多操作"><a href="#（5）typeorm更多操作" class="headerlink" title="（5）typeorm更多操作"></a>（5）typeorm更多操作</h6><p><a target="_blank" rel="noopener" href="https://www.bookstack.cn/read/TypeORM-0.2.20-zh/spilt.3.select-query-builder.md">中文文档</a>  <a target="_blank" rel="noopener" href="https://github.com/typeorm/typeorm">Git Homepage</a>   <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/section/1490182">Nest/typeorm</a></p>
@@ -269,11 +279,105 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2020/09/18/nest-js/" data-id="ckjwi9oks0000x32n5ilf7y7a" class="article-share-link" data-share="baidu" data-title="">Share</a>
+        <a data-url="http://example.com/2021/01/14/nest-js/" data-id="ckjwjmmwv00002y2ne6uo0lfd" class="article-share-link" data-share="baidu" data-title="Nest.js基础入门">Share</a>
       
 
       
-        <a href="http://example.com/2020/09/18/nest-js/#ds-thread" class="article-comment-link">Comments</a>
+        <a href="http://example.com/2021/01/14/nest-js/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-代码检测、规范" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/14/%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B%E3%80%81%E8%A7%84%E8%8C%83/" class="article-date">
+  <time datetime="2021-01-14T07:14:07.000Z" itemprop="datePublished">2021-01-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/14/%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B%E3%80%81%E8%A7%84%E8%8C%83/">代码检测、规范</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="一、editorconfig"><a href="#一、editorconfig" class="headerlink" title="一、editorconfig"></a>一、editorconfig</h4><p>主要是用不同的编辑器，IDE,不同的个人在缩进和其它规范有统一的风格</p>
+<h5 id="1-在根目录新建-editorconfig"><a href="#1-在根目录新建-editorconfig" class="headerlink" title="1.在根目录新建.editorconfig"></a>1.在根目录新建.editorconfig</h5><p>常用属性配置</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">root&lt;boolean&gt;:是否是顶级配置文件，设置为<span class="literal">true</span>的时候才会停止搜索.editorconfig文件</span><br><span class="line">charset&lt;<span class="string">&quot;latin&quot;</span> | <span class="string">&quot;utf-8&quot;</span> | <span class="string">&quot;utf-8-bom&quot;</span> | <span class="string">&quot;utf-16be&quot;</span> | <span class="string">&quot;utf-16le&quot;</span>&gt;:文件编码格式</span><br><span class="line">indent_style&lt;<span class="string">&quot;tab&quot;</span> | <span class="string">&quot;space&quot;</span>&gt;：缩进方式</span><br><span class="line">indent_size&lt;number&gt;：缩进大小</span><br><span class="line">end_of_line&lt;<span class="string">&quot;lf&quot;</span> | <span class="string">&quot;cr&quot;</span> | <span class="string">&quot;crlf&quot;</span>&gt;：换行符类型</span><br><span class="line">insert_final_newline&lt;boolean&gt;：是否让文件以空行结束</span><br><span class="line">trim_trailing_whitespace&lt;boolean&gt;：是否删除行尾空格 </span><br><span class="line">max_line_length&lt;number&gt;：最大行宽</span><br></pre></td></tr></table></figure>
+<p>文件匹配</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*                  匹配除/之外的任意字符</span><br><span class="line">**                 匹配任意字符串</span><br><span class="line">?                  匹配任意单个字符</span><br><span class="line">[name]             匹配name字符 </span><br><span class="line">[!name]            不匹配name字符</span><br><span class="line">[s1,s2,s3]         匹配给定的字符串</span><br><span class="line">[num1..num2]       匹配num1到mun2直接的整数</span><br></pre></td></tr></table></figure>
+<p>vscode支持的属性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">indent_style</span><br><span class="line">indent_size</span><br><span class="line">tab_width</span><br><span class="line">end_of_line （保存时）</span><br><span class="line">insert_final_newline （保存时）</span><br><span class="line">trim_trailing_whitespace （保存时）</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>.editorconfig</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># http://editorconfig.org</span><br><span class="line">root = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">[*]</span><br><span class="line">indent_style = space</span><br><span class="line">indent_size = <span class="number">2</span></span><br><span class="line">end_of_line = lf</span><br><span class="line">charset = utf<span class="number">-8</span></span><br><span class="line">trim_trailing_whitespace = <span class="literal">true</span></span><br><span class="line">insert_final_newline = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">[*.md]</span><br><span class="line">trim_trailing_whitespace = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">[Makefile]</span><br><span class="line">indent_style = tab</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-无需另外装插件的编辑器"><a href="#2-无需另外装插件的编辑器" class="headerlink" title="2.无需另外装插件的编辑器"></a>2.无需另外装插件的编辑器</h5><div style="width: 300px;">
+ <img src="/2021/01/14/%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B%E3%80%81%E8%A7%84%E8%8C%83/1.png" class="">
+</div>
+
+<h5 id="3-需要另外装插件的编辑器"><a href="#3-需要另外装插件的编辑器" class="headerlink" title="3.需要另外装插件的编辑器"></a>3.需要另外装插件的编辑器</h5><div style="width: 300px;">
+ <img src="/2021/01/14/%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B%E3%80%81%E8%A7%84%E8%8C%83/2.png" class="">
+</div>
+
+<h5 id="4-VSCode直接安装拓展EditorConfig-for-vs-code"><a href="#4-VSCode直接安装拓展EditorConfig-for-vs-code" class="headerlink" title="4.VSCode直接安装拓展EditorConfig for vs code"></a>4.VSCode直接安装拓展EditorConfig for vs code</h5><h4 id="二、eslint"><a href="#二、eslint" class="headerlink" title="二、eslint"></a>二、eslint</h4><p>代码规范,代码检测，配置什么就检测什么。create-react-app模版已经内置了eslint，假如需要扩展，可以在根目录新建配置文件重写配置</p>
+<h5 id="1-根目录创建-eslintrc-js"><a href="#1-根目录创建-eslintrc-js" class="headerlink" title="1.根目录创建.eslintrc.js"></a>1.根目录创建.eslintrc.js</h5><p>一些常用的配置（<a target="_blank" rel="noopener" href="https://github.com/typescript-eslint/typescript-eslint/tree/v1.7.0/packages/eslint-plugin/docs/rules">typescript-eslint</a> rules, <a target="_blank" rel="noopener" href="https://eslint.bootcss.com/docs/rules/">eslint</a> rules)</p>
+<blockquote>
+<p>.eslintrc.js</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  parser: <span class="string">&quot;@typescript-eslint/parser&quot;</span>,<span class="comment">//指定解析器，将 TypeScript 转换成与 estree 兼容的形式，以便在ESLint中使用</span></span><br><span class="line">  <span class="keyword">extends</span>: [<span class="comment">//继承插件规则</span></span><br><span class="line">    <span class="string">&quot;plugin:@typescript-eslint/recommended&quot;</span>,</span><br><span class="line">    <span class="string">&quot;react-app&quot;</span>,</span><br><span class="line">    <span class="string">&quot;plugin:prettier/recommended&quot;</span></span><br><span class="line">  ],</span><br><span class="line">  plugins: [<span class="string">&quot;@typescript-eslint&quot;</span>, <span class="string">&quot;react&quot;</span>,<span class="string">&quot;react-hooks&quot;</span>],<span class="comment">//第三方插件</span></span><br><span class="line">  rules: &#123;</span><br><span class="line">    <span class="string">&quot;prettier/prettier&quot;</span>: <span class="string">&quot;error&quot;</span>,<span class="comment">//prettier标记的地方抛出错误</span></span><br><span class="line">    <span class="string">&quot;@typescript-eslint/no-explicit-any&quot;</span>: <span class="string">&quot;off&quot;</span>,<span class="comment">//关掉any报错</span></span><br><span class="line">    <span class="string">&quot;@typescript-eslint/interface-name-prefix&quot;</span>: <span class="string">&quot;on&quot;</span>,<span class="comment">//interface IAnimal这样是不允许的</span></span><br><span class="line">    <span class="string">&quot;@typescript-eslint/class-name-casing&quot;</span>: <span class="string">&quot;off&quot;</span>,</span><br><span class="line">    <span class="string">&quot;@typescript-eslint/camelcase&quot;</span>: <span class="string">&quot;off&quot;</span>,</span><br><span class="line">    <span class="string">&quot;@typescript-eslint/explicit-function-return-type&quot;</span>: <span class="string">&quot;off&quot;</span>,</span><br><span class="line">    <span class="string">&quot;no-empty-function&quot;</span>: <span class="string">&quot;off&quot;</span>,</span><br><span class="line">    <span class="string">&quot;@typescript-eslint/no-var-requires&quot;</span>: <span class="number">0</span>, <span class="comment">//允许使用require引入包</span></span><br><span class="line">    <span class="string">&quot;@typescript-eslint/no-empty-function&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;error&quot;</span>,</span><br><span class="line">      &#123; <span class="attr">allow</span>: [<span class="string">&quot;functions&quot;</span>, <span class="string">&quot;arrowFunctions&quot;</span>, <span class="string">&quot;methods&quot;</span>] &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-创建-eslintignore文件，配置无需代码检测的文件"><a href="#2-创建-eslintignore文件，配置无需代码检测的文件" class="headerlink" title="2.创建.eslintignore文件，配置无需代码检测的文件"></a>2.创建.eslintignore文件，配置无需代码检测的文件</h5><blockquote>
+<p>.eslintignore</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/scripts</span><br><span class="line">/config</span><br><span class="line">/node_modules</span><br><span class="line">/public</span><br><span class="line">/dll</span><br><span class="line">/docker</span><br></pre></td></tr></table></figure>
+
+<h4 id="三、Prettier"><a href="#三、Prettier" class="headerlink" title="三、Prettier"></a>三、Prettier</h4><p><a target="_blank" rel="noopener" href="https://prettier.io/docs/en/index.html">prettier</a>,自动格式化，让代码风格统一</p>
+<h6 id="（1）vscode安装拓展Prettier-Code-formatter"><a href="#（1）vscode安装拓展Prettier-Code-formatter" class="headerlink" title="（1）vscode安装拓展Prettier - Code formatter"></a>（1）vscode安装拓展Prettier - Code formatter</h6><h6 id="（2）安装依赖"><a href="#（2）安装依赖" class="headerlink" title="（2）安装依赖"></a>（2）安装依赖</h6><p>eslint-config-prettier避免prettier，eslint配置冲突<br>eslint-plugin-prettier调用prettier风格对代码进行检查</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install prettier eslint-config-prettier eslint-plugin-prettier --save-dev</span><br></pre></td></tr></table></figure>
+<h6 id="（3）创建-prettierignore文件，配置无需格式化的文件"><a href="#（3）创建-prettierignore文件，配置无需格式化的文件" class="headerlink" title="（3）创建.prettierignore文件，配置无需格式化的文件"></a>（3）创建.prettierignore文件，配置无需格式化的文件</h6><blockquote>
+<p>.prettierignore</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">**<span class="comment">/*.svg</span></span><br><span class="line"><span class="comment">package.json</span></span><br><span class="line"><span class="comment">/dist</span></span><br><span class="line"><span class="comment">/dll</span></span><br><span class="line"><span class="comment">/script</span></span><br><span class="line"><span class="comment">/config</span></span><br><span class="line"><span class="comment">.eslintignore</span></span><br><span class="line"><span class="comment">*.png</span></span><br><span class="line"><span class="comment">*.toml</span></span><br><span class="line"><span class="comment">docker</span></span><br><span class="line"><span class="comment">.editorconfig</span></span><br><span class="line"><span class="comment">Dockerfile*</span></span><br><span class="line"><span class="comment">.gitignore</span></span><br><span class="line"><span class="comment">.prettierignore</span></span><br><span class="line"><span class="comment">LICENSE</span></span><br><span class="line"><span class="comment">.eslintcache</span></span><br><span class="line"><span class="comment">*.lock</span></span><br><span class="line"><span class="comment">yarn-error.log</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="四、-vscode"><a href="#四、-vscode" class="headerlink" title="四、.vscode"></a>四、.vscode</h4><p>统一大家的vscode配置</p>
+<h5 id="1-根目录创建-vscode文件夹或者在settings里面选择Edit-in-settings-json自动创建"><a href="#1-根目录创建-vscode文件夹或者在settings里面选择Edit-in-settings-json自动创建" class="headerlink" title="1.根目录创建.vscode文件夹或者在settings里面选择Edit in settings.json自动创建"></a>1.根目录创建.vscode文件夹或者在settings里面选择Edit in settings.json自动创建</h5><blockquote>
+<p>settings.json</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;editor.tabSize&quot;</span>: <span class="number">2</span>, <span class="comment">//tab 两格</span></span><br><span class="line">  <span class="string">&quot;editor.codeActionsOnSave&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;source.fixAll.eslint&quot;</span>: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;editor.formatOnSave&quot;</span>: <span class="literal">true</span>, <span class="comment">// eslint保存格式化（所有支持的语言）</span></span><br><span class="line">  <span class="string">&quot;prettier.eslintIntegration&quot;</span>: <span class="literal">true</span>, <span class="comment">// 让prettier遵循eslint格式美化</span></span><br><span class="line">  <span class="string">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;esbenp.prettier-vscode&quot;</span>, <span class="comment">//设置prettier为默认格式化工具</span></span><br><span class="line">  <span class="string">&quot;[javascript]&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;editor.defaultFormatter&quot;</span>: <span class="string">&quot;esbenp.prettier-vscode&quot;</span> <span class="comment">//设置prettier为默认格式化工具</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="五、husky"><a href="#五、husky" class="headerlink" title="五、husky"></a>五、husky</h4><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jiaoshou/p/12222665.html">哈士奇</a>，git hooks,允许执行某个git操作前或者后，执行某个脚本，类似一个监听事件。一般项目中与lint-staged一起使用</p>
+<h5 id="1-安装依赖"><a href="#1-安装依赖" class="headerlink" title="1.安装依赖"></a>1.安装依赖</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install husky --save-dev</span><br></pre></td></tr></table></figure>
+<h5 id="2-在package-json中配置"><a href="#2-在package-json中配置" class="headerlink" title="2.在package.json中配置"></a>2.在package.json中配置</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;husky&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;hooks&quot;</span>: &#123;</span><br><span class="line">      <span class="string">&quot;pre-commit&quot;</span>: <span class="string">&quot;lint-staged&quot;</span>  <span class="comment">//代码提交前使用lint-staged检查代码</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+
+<h4 id="六、lint-staged"><a href="#六、lint-staged" class="headerlink" title="六、lint-staged"></a>六、lint-staged</h4><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jiaoshou/p/12250278.html">lint-staged</a>，对git暂存区的代码，进行lint检测</p>
+<h5 id="1-安装依赖-1"><a href="#1-安装依赖-1" class="headerlink" title="1.安装依赖"></a>1.安装依赖</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install lint-staged --save-dev</span><br></pre></td></tr></table></figure>
+<h5 id="2-在package-json中配置-1"><a href="#2-在package-json中配置-1" class="headerlink" title="2.在package.json中配置"></a>2.在package.json中配置</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;lint-staged&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;**/*.&#123;js,jsx,tsx,ts&#125;&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;eslint --fix --ext .js,.jsx,.ts,.tsx&quot;</span>,</span><br><span class="line">      <span class="string">&quot;prettier --write&quot;</span>,</span><br><span class="line">      <span class="string">&quot;git add&quot;</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://example.com/2021/01/14/%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B%E3%80%81%E8%A7%84%E8%8C%83/" data-id="ckjwjmmx100012y2ng8w82i8o" class="article-share-link" data-share="baidu" data-title="代码检测、规范">Share</a>
+      
+
+      
+        <a href="http://example.com/2021/01/14/%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B%E3%80%81%E8%A7%84%E8%8C%83/#ds-thread" class="article-comment-link">Comments</a>
       
 
       
@@ -299,7 +403,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -311,7 +415,11 @@
       <ul>
         
           <li>
-            <a href="/2020/09/18/nest-js/">(no title)</a>
+            <a href="/2021/01/14/nest-js/">Nest.js基础入门</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/14/%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B%E3%80%81%E8%A7%84%E8%8C%83/">代码检测、规范</a>
           </li>
         
       </ul>
