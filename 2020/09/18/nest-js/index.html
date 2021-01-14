@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>mocai的学习笔记</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Nest.js快速入门一、介绍Nest 是一个用于构建高效，可扩展的Node.js服务器端应用程序的框架。它使用渐进式JavaScript，内置并完全支持TypeScript（但仍然允许开发人员使用纯 JavaScript编写代码）并结合了OOP（面向对象编程），FP（函数式编程）和FRP（函数式响应编程）的元素。在底层，Nest使用强大的 HTTP Server 框架，如 Express（默认）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mocai的学习笔记">
+<meta property="og:url" content="http://example.com/2020/09/18/nest-js/index.html">
+<meta property="og:site_name" content="mocai的学习笔记">
+<meta property="og:description" content="Nest.js快速入门一、介绍Nest 是一个用于构建高效，可扩展的Node.js服务器端应用程序的框架。它使用渐进式JavaScript，内置并完全支持TypeScript（但仍然允许开发人员使用纯 JavaScript编写代码）并结合了OOP（面向对象编程），FP（函数式编程）和FRP（函数式响应编程）的元素。在底层，Nest使用强大的 HTTP Server 框架，如 Express（默认）">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2020/09/18/nest-js/1.png">
+<meta property="og:image" content="http://example.com/2020/09/18/nest-js/3.png">
+<meta property="og:image" content="http://example.com/2020/09/18/nest-js/2.png">
+<meta property="og:image" content="http://example.com/2020/09/18/nest-js/4.png">
+<meta property="og:image" content="http://example.com/2020/09/18/nest-js/5.jpeg">
+<meta property="og:image" content="http://example.com/2020/09/18/nest-js/6.jpeg">
+<meta property="og:image" content="http://example.com/2020/09/18/nest-js/7.jpeg">
+<meta property="og:image" content="http://example.com/2020/09/18/nest-js/8.jpeg">
+<meta property="og:image" content="http://example.com/2020/09/18/nest-js/9.jpeg">
+<meta property="og:image" content="http://example.com/2020/09/18/nest-js/10.png">
+<meta property="og:image" content="http://example.com/2020/09/18/nest-js/11.png">
+<meta property="og:image" content="http://example.com/2020/09/18/nest-js/12.png">
+<meta property="og:image" content="http://example.com/2020/09/18/nest-js/13.png">
+<meta property="article:published_time" content="2020-09-18T02:30:33.027Z">
+<meta property="article:modified_time" content="2021-01-14T06:36:51.980Z">
+<meta property="article:author" content="Mocai">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2020/09/18/nest-js/1.png">
+  
+    <link rel="alternative" href="/atom.xml" title="mocai的学习笔记" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body>
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">mocai的学习笔记</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="submit" value="" class="search-form-submit">
+          <input name=tn type=hidden value="bds">
+          <input name=cl type=hidden value="3">
+          <input name=ct type=hidden value="2097152">
+          <input type="hidden" name="si" value="example.com">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+    <div class="outer">
+      <section id="main"><article id="post-nest-js" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/18/nest-js/" class="article-date">
+  <time datetime="2020-09-18T02:30:33.027Z" itemprop="datePublished">2020-09-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Nest-js快速入门"><a href="#Nest-js快速入门" class="headerlink" title="Nest.js快速入门"></a>Nest.js快速入门</h1><h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>Nest 是一个用于构建高效，可扩展的<a target="_blank" rel="noopener" href="http://nodejs.cn/">Node.js</a>服务器端应用程序的框架。它使用渐进式JavaScript，内置并完全支持<a target="_blank" rel="noopener" href="https://www.tslang.cn/">TypeScript</a>（但仍然允许开发人员使用纯 JavaScript编写代码）并结合了OOP（面向对象编程），FP（函数式编程）和FRP（函数式响应编程）的元素。在底层，Nest使用强大的 HTTP Server 框架，如 Express（默认）和Fastify。Nest在这些框架之上提供了一定程度的抽象，同时也将其API直接暴露给开发人员。这样可以轻松使用每个平台的无数第三方模块。</p>
+<h4 id="二、安装与启动"><a href="#二、安装与启动" class="headerlink" title="二、安装与启动"></a>二、安装与启动</h4><h5 id="1-全局安装脚手架"><a href="#1-全局安装脚手架" class="headerlink" title="1.全局安装脚手架"></a>1.全局安装脚手架</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">npm i -g @nestjs/cli</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span> </span><br></pre></td></tr></table></figure>
+<h5 id="2-创建项目"><a href="#2-创建项目" class="headerlink" title="2.创建项目"></a>2.创建项目</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /dirName</span><br><span class="line">nest <span class="keyword">new</span> project-name</span><br></pre></td></tr></table></figure>
+<h5 id="3-启动项目"><a href="#3-启动项目" class="headerlink" title="3.启动项目"></a>3.启动项目</h5><p>默认启动3000端口，可在主文件main.ts修改端口</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd nest-project</span><br><span class="line">npm run start</span><br></pre></td></tr></table></figure>
+<h5 id="4-快速打开项目"><a href="#4-快速打开项目" class="headerlink" title="4.快速打开项目"></a>4.快速打开项目</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code .</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>小技巧：命令行快速打开vscode</p>
+<ol>
+<li>手动打开vscode</li>
+<li>command + shift + p 打开命令面板（或者点击菜单栏 查看&gt;命令面板）</li>
+<li>输入shell（选择”install code command in PATH”）</li>
+<li>打开终端 进入需要用IDE打开的文件夹 输入”code .”</li>
+</ol>
+</blockquote>
+<div style="width: 250px;">
+ <img src="/2020/09/18/nest-js/1.png" class="">
+</div>
+
+
+<h4 id="三、基本使用"><a href="#三、基本使用" class="headerlink" title="三、基本使用"></a>三、基本使用</h4><h5 id="1-快速生成module-service-controller模块文件"><a href="#1-快速生成module-service-controller模块文件" class="headerlink" title="1.快速生成module,service,controller模块文件"></a>1.快速生成module,service,controller模块文件</h5><ul>
+<li>folderName是在src下新生成的目录名</li>
+<li>module.ts生成后会自动导入app.module.ts文件</li>
+<li>先生成module.ts，后面生成的controller.ts和service.ts会自动导入module.ts</li>
+<li>详细内容请看<a target="_blank" rel="noopener" href="https://docs.nestjs.cn/7/cli">CLI</a><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nest g mo -p src $&#123;folderName&#125;</span><br><span class="line">nest g co -p src $&#123;folderName&#125;</span><br><span class="line">nest g service -p src $&#123;folderName&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h5 id="2-小技巧（写自己一段生成三个模块文件的代码，写来玩玩）"><a href="#2-小技巧（写自己一段生成三个模块文件的代码，写来玩玩）" class="headerlink" title="2.小技巧（写自己一段生成三个模块文件的代码，写来玩玩）"></a>2.小技巧（写自己一段生成三个模块文件的代码，写来玩玩）</h5><p>新建一个文件config文件夹，把createFolder.js放进去</p>
+<blockquote>
+<p>createFolder.js</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// eslint-disable-next-line @typescript-eslint/no-var-requires</span></span><br><span class="line"><span class="keyword">const</span> child_process = <span class="built_in">require</span>(<span class="string">&#x27;child_process&#x27;</span>);</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (process.argv.length === <span class="number">2</span> ) &#123;</span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(</span><br><span class="line">    <span class="string">&quot;名称不能为空&quot;</span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> folderName = process.argv[<span class="number">2</span>];</span><br><span class="line"><span class="keyword">const</span> cmd = <span class="string">`nest g mo -p src <span class="subst">$&#123;folderName&#125;</span> &amp;&amp; nest g co -p src <span class="subst">$&#123;folderName&#125;</span> &amp;&amp; nest g service -p src <span class="subst">$&#123;folderName&#125;</span>`</span></span><br><span class="line"> </span><br><span class="line">child_process.exec(cmd, <span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (error !== <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;exec error: &#x27;</span> + error);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="built_in">console</span>.log(<span class="string">&quot;finished&quot;</span>);</span><br><span class="line">&#125;)</span><br><span class="line">package.json配置</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;scripts&quot;</span>:&#123;</span><br><span class="line">   <span class="string">&quot;createFolder&quot;</span>: <span class="string">&quot;node config/createFolder.js&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>终端执行</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run createFolder talks</span><br></pre></td></tr></table></figure>
+<p>执行结果</p>
+<div style="width: 400px">
+ <img src="/2020/09/18/nest-js/3.png" class="">
+</div>
+
+<div style="width: 800px;">
+ <img src="/2020/09/18/nest-js/2.png" class="">
+</div>
+
+<p>抛出异常</p>
+<div style="width: 800px;">
+ <img src="/2020/09/18/nest-js/4.png" class="">
+</div>
+
+<h5 id="3-Controller控制器"><a href="#3-Controller控制器" class="headerlink" title="3.Controller控制器"></a>3.Controller控制器</h5><p><a target="_blank" rel="noopener" href="https://docs.nestjs.cn/7/controllers">控制器</a>负责处理传入的 请求 和向客户端返回响应；<br>控制器所需的 @Controller()装饰器及请求方法装饰器如@Get()，@Post()可声明路由；<br>如下面例子，@Controller(‘talks’)与@Get(“getInfo”)会为请求生成路由映射 /talks/getInfo</p>
+<blockquote>
+<p>talks.controller.ts</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Controller, Get &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"> </span><br><span class="line">@Controller(<span class="string">&#x27;talks&#x27;</span>)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">TalksController</span> </span>&#123;</span><br><span class="line">   </span><br><span class="line">  @Get(<span class="string">&quot;getInfo&quot;</span>)</span><br><span class="line">  getInfo(): any &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123; <span class="string">&quot;name&quot;</span>: <span class="string">&quot;莫彩梅&quot;</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<div style="width: 800px;">
+ <img src="/2020/09/18/nest-js/5.jpeg" class="">
+</div>
+
+<h5 id="4-Providers（service-提供者"><a href="#4-Providers（service-提供者" class="headerlink" title="4.Providers（service)提供者"></a>4.Providers（service)提供者</h5><p>Controller处理请求，把复杂的任务交给<a target="_blank" rel="noopener" href="https://docs.nestjs.cn/7/providers">Providers</a>处理，例如数据处理，数据库操作等。</p>
+<blockquote>
+<p>talks.service.ts</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Injectable &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"> </span><br><span class="line">@Injectable()</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">TalksService</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">  getInfo():any&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;这是TalksService返回的内容&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在Controller中使用</p>
+<blockquote>
+<p>talks.controller.ts</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Controller, Get &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; TalksService &#125; <span class="keyword">from</span> <span class="string">&quot;./talks.service&quot;</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">@Controller(<span class="string">&#x27;talks&#x27;</span>)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">TalksController</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">  @Get(<span class="string">&quot;getInfo&quot;</span>)</span><br><span class="line">  getInfo(): any &#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">new</span> TalksService()).getInfo()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>或者你可以将TalksService实例私有化</p>
+<blockquote>
+<p>talks.controller.ts</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Controller, Get &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; TalksService &#125; <span class="keyword">from</span> <span class="string">&quot;./talks.service&quot;</span></span><br><span class="line"> </span><br><span class="line">@Controller(<span class="string">&#x27;talks&#x27;</span>)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">TalksController</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(private readonly talksService: TalksService)&#123;&#125;</span><br><span class="line"> </span><br><span class="line">  @Get(<span class="string">&quot;getInfo&quot;</span>)</span><br><span class="line">  getInfo(): any &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.talksService.getInfo()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<div style="width: 800px;">
+ <img src="/2020/09/18/nest-js/6.jpeg" class="">
+</div>
+
+
+<h5 id="5-Module模块"><a href="#5-Module模块" class="headerlink" title="5.Module模块"></a>5.Module模块</h5><p><a target="_blank" rel="noopener" href="https://docs.nestjs.cn/7/modules">模块</a>构成应用程序</p>
+<div style="width: 800px;">
+ <img src="/2020/09/18/nest-js/7.jpeg" class="">
+</div>
+
+<h6 id="（1）根模块"><a href="#（1）根模块" class="headerlink" title="（1）根模块"></a>（1）根模块</h6><p>根模块（必须），组织各种模块（如功能模块）；<br>一般用cli命令生成的模块会自动导入到根模块中</p>
+<blockquote>
+<p>app.module.ts</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Module &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; UsersModule &#125; <span class="keyword">from</span> <span class="string">&#x27;./users/users.module&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; ChatModule &#125; <span class="keyword">from</span> <span class="string">&#x27;./chat/chat.module&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; TalksModule &#125; <span class="keyword">from</span> <span class="string">&#x27;./talks/talks.module&#x27;</span>;</span><br><span class="line"> </span><br><span class="line">@Module(&#123;</span><br><span class="line">  imports: [</span><br><span class="line">    UsersModule,</span><br><span class="line">    ChatModule,</span><br><span class="line">    TalksModule,</span><br><span class="line">  ],</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">AppModule</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="（2）功能模块"><a href="#（2）功能模块" class="headerlink" title="（2）功能模块"></a>（2）功能模块</h6><p>负责处理某种功能的模块，例如上面例子的talks模块就算一个功能模块了吧；<br>一般用cli命令生成的模块同个目录下的controllers，providers（service）会自动导入到模块module文件中</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Module &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; TalksController &#125; <span class="keyword">from</span> <span class="string">&#x27;./talks.controller&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; TalksService &#125; <span class="keyword">from</span> <span class="string">&#x27;./talks.service&#x27;</span>;</span><br><span class="line"> </span><br><span class="line">@Module(&#123;</span><br><span class="line">  controllers: [TalksController],</span><br><span class="line">  providers: [TalksService]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">TalksModule</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="四、知识点"><a href="#四、知识点" class="headerlink" title="四、知识点"></a>四、知识点</h4><h5 id="1-DTO-Data-Transfer-Object-数据传输对象"><a href="#1-DTO-Data-Transfer-Object-数据传输对象" class="headerlink" title="1.DTO(Data Transfer Object)数据传输对象"></a>1.DTO(Data Transfer Object)数据传输对象</h5><p>A DTO is an object that defines how the data will be sent over the network<br>展示层与服务层之间的数据传输对象，就是调用接口时传过来的数据</p>
+<h6 id="（1）users-dto-ts（定义数据传输对象）"><a href="#（1）users-dto-ts（定义数据传输对象）" class="headerlink" title="（1）users.dto.ts（定义数据传输对象）"></a>（1）users.dto.ts（定义数据传输对象）</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">UserInfoDto</span></span>&#123;</span><br><span class="line">  readonly name: string;</span><br><span class="line">  readonly lasttName: string;</span><br><span class="line">  readonly age: number;</span><br><span class="line">  readonly sex: string;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="（2）users-controller-ts（在controller中使用）"><a href="#（2）users-controller-ts（在controller中使用）" class="headerlink" title="（2）users.controller.ts（在controller中使用）"></a>（2）users.controller.ts（在controller中使用）</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Post, Body &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; UserInfoDto &#125; <span class="keyword">from</span> <span class="string">&#x27;./dto/users.dto&#x27;</span>;</span><br><span class="line"> </span><br><span class="line">@Controller(<span class="string">&#x27;users&#x27;</span>)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">UsersController</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">  @Post(<span class="string">&#x27;add&#x27;</span>)</span><br><span class="line">  <span class="keyword">async</span> create(@Body() userInfoDto: UserInfoDto): string &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; name, age &#125; = userInfoDto;</span><br><span class="line">    <span class="built_in">console</span>.log(name, age)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2-管道"><a href="#2-管道" class="headerlink" title="2.管道"></a>2.管道</h5><p>拦截方法的调用参数，在执行方法前对参数进行转换或者验证<br>管道有两个类型:<br>转换：管道将输入数据转换为所需的数据输出<br>验证：对输入数据进行验证，如果验证成功继续传递; 验证失败则抛出异常;</p>
+<h6 id="Nest内置管道"><a href="#Nest内置管道" class="headerlink" title="Nest内置管道"></a>Nest内置管道</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ValidationPipe</span><br><span class="line">ParseIntPipe</span><br><span class="line">ParseBoolPipe</span><br><span class="line">ParseArrayPipe</span><br><span class="line">ParseUUIDPipe</span><br></pre></td></tr></table></figure>
+<h6 id="全局管道"><a href="#全局管道" class="headerlink" title="全局管道"></a>全局管道</h6><p>用useGlobalPipes()方法全局管道，用于整个应用程序中的每个路由处理器</p>
+<h5 id="3-数据校验"><a href="#3-数据校验" class="headerlink" title="3.数据校验"></a>3.数据校验</h5><p><a target="_blank" rel="noopener" href="https://github.com/typestack/class-validator">class-validator</a>对于接收到的数据进行判断校验（是否为空、类型是否正确、长度等等）</p>
+<h6 id="（1）安装依赖包"><a href="#（1）安装依赖包" class="headerlink" title="（1）安装依赖包"></a>（1）安装依赖包</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save <span class="class"><span class="keyword">class</span>-<span class="title">validator</span> <span class="title">class</span>-<span class="title">transformer</span></span></span><br></pre></td></tr></table></figure>
+<p>ValidationPipe 需要同时安装 class-validator 和 class-transformer 包）</p>
+<h6 id="（2）users-dto-ts"><a href="#（2）users-dto-ts" class="headerlink" title="（2）users.dto.ts"></a>（2）users.dto.ts</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; IsNotEmpty, IsString, IsInt, MaxLength  &#125; <span class="keyword">from</span> <span class="string">&#x27;class-validator&#x27;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">UserInfoDto</span></span>&#123;</span><br><span class="line">  @IsNotEmpty(&#123; <span class="attr">message</span>: <span class="string">&#x27;名称不能为空&#x27;</span> &#125;)</span><br><span class="line">  readonly name: string;</span><br><span class="line"> </span><br><span class="line">  @IsString(&#123; <span class="attr">message</span>: <span class="string">&#x27;必须的字符类型&#x27;</span> &#125;)</span><br><span class="line">  readonly firstName: string;</span><br><span class="line"> </span><br><span class="line">  @IsString(&#123; <span class="attr">message</span>: <span class="string">&#x27;必须的字符类型&#x27;</span> &#125;)</span><br><span class="line">  readonly lastName: string;</span><br><span class="line"> </span><br><span class="line">  @IsInt(&#123; <span class="attr">message</span>: <span class="string">&#x27;必须的整数&#x27;</span> &#125;)</span><br><span class="line">  readonly age: number;</span><br><span class="line"> </span><br><span class="line">  @MaxLength(<span class="number">5</span>, &#123;<span class="attr">message</span>: <span class="string">&#x27;长度不能超过5&#x27;</span> &#125;)</span><br><span class="line">  readonly sex: string;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="3-局部验证"><a href="#3-局部验证" class="headerlink" title="(3)局部验证"></a>(3)局部验证</h6><p>将管道实例绑定到路由参数装饰器@Body</p>
+<blockquote>
+<p>users.controller.ts</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Post, Body, ValidationPipe &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; UserInfoDto &#125; <span class="keyword">from</span> <span class="string">&#x27;./dto/users.dto&#x27;</span>;</span><br><span class="line"> </span><br><span class="line">@Controller(<span class="string">&#x27;users&#x27;</span>)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">UsersController</span> </span>&#123;</span><br><span class="line">   </span><br><span class="line">  @Post(<span class="string">&#x27;add&#x27;</span>)</span><br><span class="line">  <span class="keyword">async</span> create(@Body(<span class="keyword">new</span> ValidationPipe()) userInfoDto: UserInfoDto): string &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; name, age &#125; = userInfoDto;</span><br><span class="line">    <span class="built_in">console</span>.log(name, age)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="4-全局验证"><a href="#4-全局验证" class="headerlink" title="(4)全局验证"></a>(4)全局验证</h6><p>设置全局管道，用于整个应用程序、每个控制器和每个路由处理程序。<br>无需再局部绑定 。</p>
+<blockquote>
+<p>main.ts</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; NestFactory &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/core&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; AppModule &#125; <span class="keyword">from</span> <span class="string">&#x27;./app.module&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Logger, ValidationPipe &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">bootstrap</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> app = <span class="keyword">await</span> NestFactory.create(AppModule);</span><br><span class="line">  <span class="comment">// 全局使用管道</span></span><br><span class="line">  app.useGlobalPipes(<span class="keyword">new</span> ValidationPipe());</span><br><span class="line">  <span class="keyword">await</span> app.listen(<span class="number">3001</span>,<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    Logger.log(<span class="string">&#x27;服务已经启动,请访问localhost:3000&#x27;</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line">bootstrap();</span><br></pre></td></tr></table></figure>
+<p>局部与全局验证结果一致：</p>
+<div style="width: 800px;">
+ <img src="/2020/09/18/nest-js/8.jpeg" class="">
+</div>
+
+<h4 id="五、数据库"><a href="#五、数据库" class="headerlink" title="五、数据库"></a>五、数据库</h4><h5 id="1-安装ORM库"><a href="#1-安装ORM库" class="headerlink" title="1.安装ORM库"></a>1.安装ORM库</h5><p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2019/02/orm-tutorial.html">ORM</a>即对象-关系映射，可以不用写sql，直接操作数据库；<br>Nest 使用<a target="_blank" rel="noopener" href="https://github.com/typeorm/typeorm">TypeORM</a>是因为它是 TypeScript 中最成熟的对象关系映射器( ORM )。因为它是用 TypeScript 编写的，所以可以很好地与 Nest 框架集成。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save @nestjs/typeorm typeorm mysql</span><br></pre></td></tr></table></figure>
+<h5 id="2-创建ormconfig-json"><a href="#2-创建ormconfig-json" class="headerlink" title="2.创建ormconfig.json"></a>2.创建ormconfig.json</h5><p>配置你要连接的数据库信息</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;type&quot;</span>: <span class="string">&quot;mysql&quot;</span>,</span><br><span class="line">  <span class="string">&quot;host&quot;</span>: <span class="string">&quot;localhost&quot;</span>,</span><br><span class="line">  <span class="string">&quot;port&quot;</span>: <span class="number">3306</span>,</span><br><span class="line">  <span class="string">&quot;username&quot;</span>: <span class="string">&quot;root&quot;</span>,</span><br><span class="line">  <span class="string">&quot;password&quot;</span>: <span class="string">&quot;*******&quot;</span>,<span class="comment">//填你的数据库密码</span></span><br><span class="line">  <span class="string">&quot;database&quot;</span>: <span class="string">&quot;nest-test&quot;</span>,</span><br><span class="line">  <span class="string">&quot;entities&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;dist/**/*.entity&#123;.ts,.js&#125;&quot;</span> <span class="comment">//静态全局路径</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">&quot;synchronize&quot;</span>: <span class="literal">true</span> <span class="comment">// 是否自动将实体类同步到数据库</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div style="width: 800px;">
+ <img src="/2020/09/18/nest-js/9.jpeg" class="">
+</div>
+
+<h5 id="3-创建实体类"><a href="#3-创建实体类" class="headerlink" title="3.创建实体类"></a>3.创建实体类</h5><p>实体类一般都与数据库中的表结构一一对应<br>表→类<br>字段→属性</p>
+<h6 id="1-Entity"><a href="#1-Entity" class="headerlink" title="(1)@Entity()"></a>(1)@Entity()</h6><p>对应一个表,如果实体类名和表名不一致，可以在@Entity()注解中传入表名字段。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Entity(<span class="string">&#x27;new_user&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h6 id="2-Column"><a href="#2-Column" class="headerlink" title="(2)@Column()"></a>(2)@Column()</h6><p>可以传入一个Object，可以指定字段的类型、大小等待属性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Column(&#123; <span class="attr">type</span>: <span class="string">&quot;varchar&quot;</span>, <span class="attr">width</span>: <span class="number">200</span> &#125;);</span><br></pre></td></tr></table></figure>
+<p>如果想要实体名称与表字段名称不同, 设置name属性</p>
+<blockquote>
+<p>user.entity.ts</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Entity, Column, PrimaryGeneratedColumn, Timestamp &#125; <span class="keyword">from</span> <span class="string">&#x27;typeorm&#x27;</span>;</span><br><span class="line"> </span><br><span class="line">@Entity()</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">  @PrimaryGeneratedColumn()</span><br><span class="line">  id: number;</span><br><span class="line"> </span><br><span class="line">  @Column()</span><br><span class="line">  name: string;</span><br><span class="line"> </span><br><span class="line">  @Column()</span><br><span class="line">  firstName: string;</span><br><span class="line"> </span><br><span class="line">  @Column()</span><br><span class="line">  lastName: string;</span><br><span class="line"> </span><br><span class="line">  @Column()</span><br><span class="line">  age: number;</span><br><span class="line"> </span><br><span class="line">  @Column()</span><br><span class="line">  sex: string;</span><br><span class="line"> </span><br><span class="line">  @Column(&#123; <span class="attr">default</span>: <span class="literal">true</span> &#125;)</span><br><span class="line">  isActive: boolean;</span><br><span class="line"> </span><br><span class="line">  updateAt: Timestamp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="4-模块注入"><a href="#4-模块注入" class="headerlink" title="4.模块注入"></a>4.模块注入</h5><h6 id="（1）单个数据库"><a href="#（1）单个数据库" class="headerlink" title="（1）单个数据库"></a>（1）单个数据库</h6><p>TypeOrmModule.forRoot()在根模块使用，默认注入默认数据库连接模块<br>TypeOrmModule.forFeature()在子模块使用，定义应在当前范围中注册的存储库</p>
+<blockquote>
+<p>app.module.ts</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Module &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; UsersModule &#125; <span class="keyword">from</span> <span class="string">&#x27;./users/users.module&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; TypeOrmModule &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/typeorm&#x27;</span>;</span><br><span class="line"></span><br><span class="line">@Module(&#123;</span><br><span class="line">  imports: [</span><br><span class="line">    UsersModule, </span><br><span class="line">    TypeOrmModule.forRoot(), </span><br><span class="line">  ],</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">AppModule</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>users.module.ts</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Module &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; UsersController &#125; <span class="keyword">from</span> <span class="string">&#x27;./users.controller&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; UsersService &#125; <span class="keyword">from</span> <span class="string">&#x27;./users.service&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; TypeOrmModule &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/typeorm&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; User &#125; <span class="keyword">from</span> <span class="string">&#x27;./user.entity&#x27;</span>;</span><br><span class="line"></span><br><span class="line">@Module(&#123;</span><br><span class="line">  imports: [</span><br><span class="line">    TypeOrmModule.forFeature([User])</span><br><span class="line">  ],</span><br><span class="line">  controllers: [UsersController],</span><br><span class="line">  providers: [UsersService]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h6 id="（2）连接多个数据库"><a href="#（2）连接多个数据库" class="headerlink" title="（2）连接多个数据库"></a>（2）连接多个数据库</h6><p>1.直接用ormconfig.json好像有点问题，因为forRoot接收的参数是TypeOrmModuleOptions，需要把数据库配置传完整，单单传name不能区分。不传的时候会读取默认的配置，详细可以看nest文档中的<a target="_blank" rel="noopener" href="https://docs.nestjs.cn/7/techniques?id=%E6%95%B0%E6%8D%AE%E5%BA%93">数据库</a>描述<br>2.记得用name区分</p>
+<blockquote>
+<p>app.module.ts</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Module &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; UsersModule &#125; <span class="keyword">from</span> <span class="string">&#x27;./users/users.module&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; TypeOrmModule &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/typeorm&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Connection &#125; <span class="keyword">from</span> <span class="string">&#x27;typeorm&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ormconfig: any = &#123;</span><br><span class="line">  <span class="string">&quot;type&quot;</span>: <span class="string">&quot;mysql&quot;</span>,</span><br><span class="line">  <span class="string">&quot;host&quot;</span>: <span class="string">&quot;localhost&quot;</span>,</span><br><span class="line">  <span class="string">&quot;port&quot;</span>: <span class="number">3306</span>,</span><br><span class="line">  <span class="string">&quot;username&quot;</span>: <span class="string">&quot;root&quot;</span>,</span><br><span class="line">  <span class="string">&quot;password&quot;</span>: <span class="string">&quot;*******&quot;</span>,</span><br><span class="line">  <span class="string">&quot;database&quot;</span>: <span class="string">&quot;nest-test&quot;</span>,</span><br><span class="line">  <span class="string">&quot;entities&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;dist/**/*.entity&#123;.ts,.js&#125;&quot;</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">&quot;synchronize&quot;</span>: <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Module(&#123;</span><br><span class="line">  imports: [</span><br><span class="line">    UsersModule, </span><br><span class="line">    TypeOrmModule.forRoot(ormconfig),</span><br><span class="line">    TypeOrmModule.forRoot(&#123; </span><br><span class="line">      ...ormconfig,</span><br><span class="line">      name: <span class="string">&quot;connection2&quot;</span>, </span><br><span class="line">      database: <span class="string">&quot;nest-test2&quot;</span></span><br><span class="line">    &#125;),</span><br><span class="line">  ],</span><br><span class="line">  <span class="comment">// controllers: [AppController],</span></span><br><span class="line">  <span class="comment">// providers: [AppService],</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">AppModule</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(private readonly connection: Connection) &#123; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>users.module.ts<br>用name区分注册实体到哪个连接，使用哪个库</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Module &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; UsersController &#125; <span class="keyword">from</span> <span class="string">&#x27;./users.controller&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; UsersService &#125; <span class="keyword">from</span> <span class="string">&#x27;./users.service&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; TypeOrmModule &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/typeorm&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; User &#125; <span class="keyword">from</span> <span class="string">&#x27;./user.entity&#x27;</span>;</span><br><span class="line"></span><br><span class="line">@Module(&#123;</span><br><span class="line">  imports: [</span><br><span class="line">    TypeOrmModule.forFeature([User]),</span><br><span class="line">	TypeOrmModule.forFeature([User],<span class="string">&#x27;connection2&#x27;</span>)</span><br><span class="line">  ],</span><br><span class="line">  controllers: [UsersController],</span><br><span class="line">  providers: [UsersService]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h5 id="5-在service中使用，一些基本的数据库操作"><a href="#5-在service中使用，一些基本的数据库操作" class="headerlink" title="5.在service中使用，一些基本的数据库操作"></a>5.在service中使用，一些基本的数据库操作</h5><p>@InjectRepository(User,’connection2’)装饰器—注入存储库，将 UsersRepository 注入到 UsersService中<br>使用哪个实体，哪个存储库</p>
+<blockquote>
+<p>users.service.ts</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Injectable &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/common&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; UserInfo &#125; <span class="keyword">from</span> <span class="string">&quot;./interfaces/users.interface&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; InjectRepository &#125; <span class="keyword">from</span> <span class="string">&#x27;@nestjs/typeorm&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Repository &#125; <span class="keyword">from</span> <span class="string">&#x27;typeorm&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; User &#125; <span class="keyword">from</span> <span class="string">&#x27;./user.entity&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; UserInfoDto &#125; <span class="keyword">from</span>  <span class="string">&quot;./dto/users.dto&quot;</span></span><br><span class="line"> </span><br><span class="line">@Injectable()</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">UsersService</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(</span><br><span class="line">    @InjectRepository(User,&#x27;connection2&#x27;)</span><br><span class="line">    private usersRepository: Repository&lt;User&gt;,</span><br><span class="line">  )&#123;&#125;</span><br><span class="line">  private readonly users: UserInfo[] = []</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">async</span> create(userInfoDto: UserInfoDto): <span class="built_in">Promise</span>&lt;User&gt;  &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">await</span> <span class="built_in">this</span>.usersRepository.save(userInfoDto);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="（1）新增数据"><a href="#（1）新增数据" class="headerlink" title="（1）新增数据"></a>（1）新增数据</h6><p>typeorm封装好的save方法保存数据假如数据库没有user表，会帮你创建一个。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//service</span></span><br><span class="line"><span class="keyword">async</span> create(userInfoDto: UserInfoDto): <span class="built_in">Promise</span>&lt;User&gt;  &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">await</span> <span class="built_in">this</span>.usersRepository.save(userInfoDto);</span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//controller</span></span><br><span class="line">@Post(<span class="string">&#x27;add&#x27;</span>)</span><br><span class="line">  <span class="keyword">async</span> create(@Body() userInfo: UserInfoDto): <span class="built_in">Promise</span>&lt;any&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.usersService.create(userInfo);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//http://localhost:3001/users/add   Post</span></span><br><span class="line"><span class="comment">//&#123;&quot;name&quot;: &quot;mocai&quot;,&quot;firstName&quot;: &quot;mo&quot;,&quot;lastName&quot;:&quot;cai&quot;,&quot;age&quot;: 18,&quot;sex&quot;: &quot;女&quot;&#125;</span></span><br></pre></td></tr></table></figure>
+<div style="width: 800px;">
+ <img src="/2020/09/18/nest-js/10.png" class="">
+</div>
+
+<h6 id="2-查找一条数据findOne"><a href="#2-查找一条数据findOne" class="headerlink" title="(2)查找一条数据findOne"></a>(2)查找一条数据findOne</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//service</span></span><br><span class="line"><span class="keyword">async</span> findOne(id): <span class="built_in">Promise</span>&lt;User&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">await</span> <span class="built_in">this</span>.usersRepository.findOne(&#123;id&#125;);</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//controller</span></span><br><span class="line">@Get(<span class="string">&#x27;findOne&#x27;</span>)</span><br><span class="line">  <span class="keyword">async</span> findOne(@Query(<span class="string">&#x27;id&#x27;</span>) id): <span class="built_in">Promise</span>&lt;any&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span>  <span class="built_in">this</span>.usersService.findOne(id);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<div style="width: 800px;">
+ <img src="/2020/09/18/nest-js/11.png" class="">
+</div>
+
+<h6 id="3-查找全部数据find"><a href="#3-查找全部数据find" class="headerlink" title="(3)查找全部数据find"></a>(3)查找全部数据find</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//service</span></span><br><span class="line">findAll(): <span class="built_in">Promise</span>&lt;User[]&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.usersRepository.find();</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//controller</span></span><br><span class="line">@Get(<span class="string">&#x27;findAll&#x27;</span>)</span><br><span class="line">  <span class="keyword">async</span> findAll(): <span class="built_in">Promise</span>&lt;any&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.usersService.findAll();</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<div style="width: 800px;">
+ <img src="/2020/09/18/nest-js/12.png" class="">
+</div>
+
+<h6 id="（4）QueryBuilder或query原生sql查询"><a href="#（4）QueryBuilder或query原生sql查询" class="headerlink" title="（4）QueryBuilder或query原生sql查询"></a>（4）QueryBuilder或query原生sql查询</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//query写法</span></span><br><span class="line">selectmocai(): <span class="built_in">Promise</span>&lt;User[]&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.usersRepository.query(<span class="string">&quot;SELECT * FROM user WHERE `name`=&#x27;mocai&#x27;&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//QueryBuilder写法</span></span><br><span class="line">selectmocai(): <span class="built_in">Promise</span>&lt;User[]&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.usersRepository.createQueryBuilder(<span class="string">&quot;user&quot;</span>).where(<span class="string">&quot;name = &#x27;mocai&#x27;&quot;</span>).getMany();</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<div style="width: 800px;">
+ <img src="/2020/09/18/nest-js/13.png" class="">
+</div>
+
+<h6 id="（5）typeorm更多操作"><a href="#（5）typeorm更多操作" class="headerlink" title="（5）typeorm更多操作"></a>（5）typeorm更多操作</h6><p><a target="_blank" rel="noopener" href="https://www.bookstack.cn/read/TypeORM-0.2.20-zh/spilt.3.select-query-builder.md">中文文档</a>  <a target="_blank" rel="noopener" href="https://github.com/typeorm/typeorm">Git Homepage</a>   <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/section/1490182">Nest/typeorm</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://example.com/2020/09/18/nest-js/" data-id="ckfdd0u8e0000rb2n1os56sko" class="article-share-link" data-share="baidu" data-title="">Share</a>
+      
+
+      
+        <a href="http://example.com/2020/09/18/nest-js/#ds-thread" class="article-comment-link">Comments</a>
+      
+
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="2020/09/18/nest-js/" data-title="" data-url="http://example.com/2020/09/18/nest-js/"></div>
+  </section>
+</section>
+      
+      <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/09/18/nest-js/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Links</h3>
+    <div class="widget">
+      <ul>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Mocai<br>
+      <p>欢迎大家一起交流讨论～</p>
+    </div>
+  </div>
+</footer>
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+  <!-- totop start -->
+<div id="totop">
+<a title="totop"><img src="/img/scrollup.png"/></a>
+</div>
+
+<!-- totop end -->
+
+<!-- 多说公共js代码 start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"reqianduan"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共js代码 end -->
+
+
+<!-- 百度分享 start -->
+
+<div id="article-share-box" class="article-share-box">
+  <div id="bdshare" class="bdsharebuttonbox article-share-links">
+    <a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a>
+    <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a>
+    <a class="article-share-more" data-cmd="more" title="更多"></a>
+  </div>
+</div>
+<script>
+  function SetShareData(cmd, config) {
+    if (shareDataTitle && shareDataUrl) {
+      config.bdText = shareDataTitle;
+      config.bdUrl = shareDataUrl;
+    }
+    return config;
+  }
+  window._bd_share_config={
+    "common":{onBeforeClick: SetShareData},
+    "share":{"bdCustomStyle":"/css/bdshare.css"}
+  };
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+<!-- 百度分享 end -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+</div>
+</body>
+</html>
