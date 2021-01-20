@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   
-  <title>react-three-fiber | mocai的学习笔记</title>
+  <title>react-three-fiber | Mocai&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="three.js是基于webgl封装的3D绘图JS引擎，react-three-fiber对three.js进一步封装，使其在react框架中能快速使用。 一、基础知识1.Canvascanvas组件，three.js的入口，渲染three.js元素。（用来包裹所有three.js元素，创建上下文）。可传入style，className等属性，作用于canvas画布的父盒子dom。 1234567">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react-three-fiber">
 <meta property="og:url" content="http://example.com/2021/01/14/react-three-fiber/index.html">
-<meta property="og:site_name" content="mocai的学习笔记">
+<meta property="og:site_name" content="Mocai&#39;s Blog">
 <meta property="og:description" content="three.js是基于webgl封装的3D绘图JS引擎，react-three-fiber对three.js进一步封装，使其在react框架中能快速使用。 一、基础知识1.Canvascanvas组件，three.js的入口，渲染three.js元素。（用来包裹所有three.js元素，创建上下文）。可传入style，className等属性，作用于canvas画布的父盒子dom。 1234567">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2021/01/14/react-three-fiber/1.png">
@@ -18,10 +18,9 @@
 <meta property="article:published_time" content="2021-01-14T07:59:43.000Z">
 <meta property="article:modified_time" content="2021-01-14T08:25:25.677Z">
 <meta property="article:author" content="Mocai">
+<meta property="article:tag" content="前端 可视化 react webpack vue javascript three.js">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2021/01/14/react-three-fiber/1.png">
-  
-    <link rel="alternative" href="/atom.xml" title="mocai的学习笔记" type="application/atom+xml">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -40,8 +39,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">mocai的学习笔记</a>
+        <a href="/" id="logo">Mocai&#39;s Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">I got a pocket full of sunshine.</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -54,8 +57,6 @@
         
       </nav>
       <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
@@ -138,11 +139,9 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2021/01/14/react-three-fiber/" data-id="ckjwm8s760001f52n5xspf54p" class="article-share-link" data-share="baidu" data-title="react-three-fiber">Share</a>
+        <a data-url="http://example.com/2021/01/14/react-three-fiber/" data-id="ckk3g8oeg0002mc2nhk4gdh0t" class="article-share-link">Share</a>
       
 
-      
-        <a href="http://example.com/2021/01/14/react-three-fiber/#ds-thread" class="article-comment-link">Comments</a>
       
 
       
@@ -172,10 +171,6 @@
   
 </article>
 
-
-  <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="2021/01/14/react-three-fiber/" data-title="react-three-fiber" data-url="http://example.com/2021/01/14/react-three-fiber/"></div>
-  </section>
 </section>
       
       <aside id="sidebar">
@@ -226,17 +221,6 @@
   </div>
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Links</h3>
-    <div class="widget">
-      <ul>
-        
-      </ul>
-    </div>
-  </div>
-
-  
 </aside>
       
     </div>
@@ -264,52 +248,59 @@
 
 <!-- totop end -->
 
-<!-- 多说公共js代码 start -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"reqianduan"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- 多说公共js代码 end -->
-
 
 <!-- 百度分享 start -->
-
-<div id="article-share-box" class="article-share-box">
-  <div id="bdshare" class="bdsharebuttonbox article-share-links">
-    <a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
-    <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a>
-    <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a>
-    <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a>
-    <a class="article-share-more" data-cmd="more" title="更多"></a>
-  </div>
-</div>
-<script>
-  function SetShareData(cmd, config) {
-    if (shareDataTitle && shareDataUrl) {
-      config.bdText = shareDataTitle;
-      config.bdUrl = shareDataUrl;
-    }
-    return config;
-  }
-  window._bd_share_config={
-    "common":{onBeforeClick: SetShareData},
-    "share":{"bdCustomStyle":"/css/bdshare.css"}
-  };
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
 
 <!-- 百度分享 end -->
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+                processEscapes: true
+                    
+}
+  
+        });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                  
+}
+    
+        });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+            var all = MathJax.Hub.getAllJax(), i;
+            for(i=0; i < all.length; i += 1) {
+                            all[i].SourceElement().parentNode.className += ' has-jax';
+                                    
+            }
+                
+        });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
 

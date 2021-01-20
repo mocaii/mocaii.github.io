@@ -4,21 +4,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>简单实现debouce与throttle | mocai的学习笔记</title>
+  <title>简单实现debouce与throttle | Mocai&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="一、debounce（去抖）设定一个延迟时间，假如两次触发时间间隔小于延时时间，那么那段时间内的所有触发都不会执行，直到两次触发时间间隔大于设置的延迟时间。时间间隔每次都会从0重新开始计时。思路：设置一个定时器，倒计时即延迟时间，每次调用清除上一个定时器，小于延迟时间的调用被取消，大于延迟时间的调用正常执行。 12345678910111213141516171819202122232425&#x2F;&#x2F;去">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简单实现debouce与throttle">
 <meta property="og:url" content="http://example.com/2021/01/14/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0debouce%E4%B8%8Ethrottle/index.html">
-<meta property="og:site_name" content="mocai的学习笔记">
+<meta property="og:site_name" content="Mocai&#39;s Blog">
 <meta property="og:description" content="一、debounce（去抖）设定一个延迟时间，假如两次触发时间间隔小于延时时间，那么那段时间内的所有触发都不会执行，直到两次触发时间间隔大于设置的延迟时间。时间间隔每次都会从0重新开始计时。思路：设置一个定时器，倒计时即延迟时间，每次调用清除上一个定时器，小于延迟时间的调用被取消，大于延迟时间的调用正常执行。 12345678910111213141516171819202122232425&#x2F;&#x2F;去">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-14T07:49:40.000Z">
 <meta property="article:modified_time" content="2021-01-14T07:51:16.303Z">
 <meta property="article:author" content="Mocai">
+<meta property="article:tag" content="前端 可视化 react webpack vue javascript three.js">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternative" href="/atom.xml" title="mocai的学习笔记" type="application/atom+xml">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -37,8 +36,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">mocai的学习笔记</a>
+        <a href="/" id="logo">Mocai&#39;s Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">I got a pocket full of sunshine.</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -51,8 +54,6 @@
         
       </nav>
       <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
@@ -102,11 +103,9 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://example.com/2021/01/14/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0debouce%E4%B8%8Ethrottle/" data-id="ckjwm8s780003f52n81cy60fz" class="article-share-link" data-share="baidu" data-title="简单实现debouce与throttle">Share</a>
+        <a data-url="http://example.com/2021/01/14/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0debouce%E4%B8%8Ethrottle/" data-id="ckk3g8oei0004mc2n3jtu1bla" class="article-share-link">Share</a>
       
 
-      
-        <a href="http://example.com/2021/01/14/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0debouce%E4%B8%8Ethrottle/#ds-thread" class="article-comment-link">Comments</a>
       
 
       
@@ -136,10 +135,6 @@
   
 </article>
 
-
-  <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="2021/01/14/简单实现debouce与throttle/" data-title="简单实现debouce与throttle" data-url="http://example.com/2021/01/14/%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0debouce%E4%B8%8Ethrottle/"></div>
-  </section>
 </section>
       
       <aside id="sidebar">
@@ -190,17 +185,6 @@
   </div>
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Links</h3>
-    <div class="widget">
-      <ul>
-        
-      </ul>
-    </div>
-  </div>
-
-  
 </aside>
       
     </div>
@@ -228,52 +212,59 @@
 
 <!-- totop end -->
 
-<!-- 多说公共js代码 start -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"reqianduan"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- 多说公共js代码 end -->
-
 
 <!-- 百度分享 start -->
-
-<div id="article-share-box" class="article-share-box">
-  <div id="bdshare" class="bdsharebuttonbox article-share-links">
-    <a class="article-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
-    <a class="article-share-weixin" data-cmd="weixin" title="分享到微信"></a>
-    <a class="article-share-qq" data-cmd="sqq" title="分享到QQ"></a>
-    <a class="article-share-renren" data-cmd="renren" title="分享到人人网"></a>
-    <a class="article-share-more" data-cmd="more" title="更多"></a>
-  </div>
-</div>
-<script>
-  function SetShareData(cmd, config) {
-    if (shareDataTitle && shareDataUrl) {
-      config.bdText = shareDataTitle;
-      config.bdUrl = shareDataUrl;
-    }
-    return config;
-  }
-  window._bd_share_config={
-    "common":{onBeforeClick: SetShareData},
-    "share":{"bdCustomStyle":"/css/bdshare.css"}
-  };
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
 
 <!-- 百度分享 end -->
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+                processEscapes: true
+                    
+}
+  
+        });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                  
+}
+    
+        });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+            var all = MathJax.Hub.getAllJax(), i;
+            for(i=0; i < all.length; i += 1) {
+                            all[i].SourceElement().parentNode.className += ' has-jax';
+                                    
+            }
+                
+        });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
 
